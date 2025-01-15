@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pvp</title>
+        <link rel="stylesheet" href="styles/tic-tac-toe.css">
+    </head>
+    <body class="back-ground js-body">
+        <div class="js-introduction">
+            <div class="background2"></div>
+            <div class="game-start-envelope">
+                <div class="game-start">Player vs. player!</div>
+            </div>
+        </div>
+        <div class="title js-title">tic-tac-toe</div>
+        <div class="containment-interface js-containment-interface">
+            <div class="interface">
+                <div class="tile js-tile js-tile-color" data-tile-no="1"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="2"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="3"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="4"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="5"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="6"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="7"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="8"></div>
+                <div class="tile js-tile js-tile-color" data-tile-no="9"></div>
+            </div>
+            <div class="temp-disable-div js-temp-disable"></div>
+        </div>
+        <div class="side-bar">
+            <p class="score-title">Score:</p>
+            <div class="score-div">
+                <div class="you">
+                    <div class="player-title">Player-O</div>
+                    <div class="score-digit js-player1-score-digit">Player-O</div>
+                    <img class="profile-picture" src="image/player.png">
+                </div>
+                <div class="vs">
+                    <img class="vs-image" src="image/versus.png">
+                </div>
+                <div class="comp">
+                    <div class="player-title">Player-X</div>
+                    <div class="score-digit js-player2-score-digit">2</div>
+                    <img class="profile-picture" src="image/player.png">
+                </div>
+            </div>
+            <div>
+                <div class="options">
+                    <div class="options-div js-options-new-game">
+                        <img class="icon" src="image/newGame.png">
+                        <div class="js-new-game">New Game</div>
+                    </div>
+                    <div class="text-click-game js-new-game-click"></div>
+                    <div class="options-div js-options-settings">
+                        <img class="icon" src="image/settings.png">
+                        <div class="js-settings">Settings</div>
+                    </div>
+                    <div class="text-click-settings js-settings-click"></div>
+                    <div class="options-div js-options-info">
+                        <img class="icon" src="image/information.png">
+                        <div class="js-info">info</div>
+                    </div>
+                    <div class="text-click-info js-info-click"></div>
+                    <div class="options-div js-options-mode">
+                        <img class="icon" src="image/controller.png">
+                        <div class="js-game-mode">Game Mode select</div>
+                    </div>
+                    <div class="text-click-mode js-mode-click"></div>
+                </div>
+                <div class="slogan">Mdina development-#Building the nation</div>
+            </div>
+        </div>
+        <script type="module" src="scripts/pvp.js"></script>
+    </body>
+</html>

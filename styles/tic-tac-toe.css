@@ -1,0 +1,613 @@
+.interface
+{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    column-gap: 16px;
+    row-gap: 16px;
+    height: 482px;
+}
+
+.tile
+{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tile-alternate
+{
+    background-color: lightgrey;
+    width: 150px;
+    height: 150px;
+}
+
+.move
+{
+    animation: grow 0.5s;
+    width: 150px;
+    height: 150px;
+}
+
+.back-ground
+{
+    background-color: grey;
+}
+
+.purple-back-ground
+{
+    background-color: purple;
+}
+
+.blue-back-ground
+{
+    background-color: blue;
+}
+
+.green-back-ground
+{
+    background-color: green;
+}
+
+.black-back-ground
+{
+    background-color: black;
+}
+
+.brown-back-ground
+{
+    background-color: brown;
+}
+
+.orange-back-ground
+{
+    background-color: orange;
+}
+
+.yellow-back-ground
+{
+    background-color: yellow;
+}
+
+.white-back-ground
+{
+    background-color: white;
+}
+
+
+.containment-interface
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 500px;
+}
+
+.title
+{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    left: 530px;
+    font-family: fantasy;
+}
+
+.title-black
+{
+    font-size: 50px;
+    color: black;
+    position: absolute;
+    left: 530px;
+}
+
+.side-bar
+{
+    position: absolute;
+    width: 500px;
+    background-color: lightgrey;
+    font-family: arial;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.score-title
+{
+    text-decoration: underline;
+}
+
+.score-div
+{
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    column-gap: 16px;
+    font-size: 20px;
+}
+
+.you,
+.comp
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vs
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 80px;
+}
+
+.score-digit
+{
+ font-size: 60px;
+}
+
+.profile-picture
+{
+    width: 120px;
+    height: 120px;
+}
+
+.vs-image
+{
+    width: 120px;
+    height: 120px;
+}
+
+.player-title
+{
+    font-weight: bold;
+}
+
+.options
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    border-top: solid;
+    border-width: 1px;
+    height: 250px;
+    padding: 10px;
+}
+
+.options-div
+{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: arial;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.options-div-hover
+{
+    background-color: darkgrey;
+    color: white;
+    transition: 0.5;
+}
+
+.icon
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.slogan
+{
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: bold;
+    color: grey;
+    text-decoration: underline;
+}
+
+.status-message
+{
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    background-color: darkgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: solid;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: gray;
+}
+
+.status-message-image
+{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+.status-image-grow
+{
+    margin-left: 10px;
+    animation: laugh 1s;
+}
+
+.status-message-inside-content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.deco
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    background-color: lightgray;
+    border-bottom: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.deco2
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    background-color: lightgray;
+    border-top: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.text-click-game,
+.text-click-settings,
+.text-click-info,
+.text-click-mode
+{
+    transition: 0.5s;
+    background-color: white;
+    height: 40px;
+    width: 480px;
+    opacity: 0;
+    position: absolute;
+}
+
+.text-click-settings
+{
+    margin-top: 50px;
+}
+
+.text-click-info
+{
+    margin-top: 100px;
+}
+
+.text-click-mode
+{
+    margin-top: 150px;
+}
+
+.settings-ui
+{
+    position: absolute;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 20px;
+}
+
+.settings-title
+{
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.color-palette
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+.default,
+.purple,
+.blue,
+.green,
+.black,
+.brown,
+.orange,
+.yellow,
+.white
+{
+    height: 50px;
+    width: 50px;
+}
+
+.default
+{
+    background-color: grey;
+}
+
+.default:hover,
+.purple:hover,
+.blue:hover,
+.green:hover,
+.black:hover,
+.brown:hover,
+.orange:hover
+{
+    border: solid;
+    box-sizing: border-box;
+    border-width: 1px;
+}
+
+.white:hover,
+.yellow:hover
+{
+    border: solid;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-color: black;
+}
+
+.purple
+{
+    background-color: purple;
+}
+
+.blue
+{
+    background-color: blue;
+}
+
+.green
+{
+    background-color: green;
+}
+
+.black
+{
+    background-color: black;
+}
+
+.brown
+{
+    background-color: brown;
+}
+
+.orange
+{
+    background-color: orange;
+}
+
+.yellow
+{
+    background-color: yellow;
+}
+
+.white
+{
+    background-color: white;
+}
+
+.close-btn-image
+{
+    height: 18px;
+    width: 18px;
+}
+
+.close
+{
+    position: absolute;
+    top: 0;
+    right:0;
+    background-color: red;
+    border: none;
+    width: 21px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-left: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.close:hover
+{
+    background-color: rgb(201, 7, 7);
+}
+.deco-background
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 21.5px;
+    background-color: lightgray;
+    border-bottom: solid;
+    border-color: black;
+    border-width: 1px; 
+}
+
+.info-ui
+{
+    position: absolute;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: bold;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    width: 500px;
+    height: 500px;
+}
+
+.references
+{
+    font-size: 20px;
+    overflow-y: scroll;
+}
+.paragraph
+{
+    margin-left: 15px;
+}
+
+.paragraph-title
+{
+    margin-left: 15px;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+.disable
+{
+    width: 482px;
+    height: 482px;
+    position: absolute;
+}
+
+.temp-disable-div
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.background2
+{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.7;
+    z-index: 3;
+}
+
+.game-start-envelope
+{
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 4;
+    animation: slide-in 3s;
+    transform: translateX(100%);
+  
+}
+
+.game-start
+{
+    font-family: fantasy;
+    /*font-family: 'Bebas Neue';*/
+    /*font-family: 'Bauhaus 93';*/
+    color: white;
+    font-size: 50px;
+    position: relative;
+}
+
+@keyframes laugh
+{
+    0%
+    {
+        height: 50px;
+        width: 50px;
+    }
+
+    50%
+    {
+        height: 60px;
+        width: 60px;
+    }
+
+    100%
+    {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@keyframes grow
+{
+    0%
+    {
+        height: 0px;
+        width: 0px;
+    }
+
+    100%
+    {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@keyframes slide-in
+{
+    0%
+    {
+        transform: translateX(-100%);
+    }
+
+    50%
+    {
+        transform: translateX(0%);
+    }
+
+    100%
+    {
+        transform: translateX(100%);
+    }
+}
