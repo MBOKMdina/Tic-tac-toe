@@ -4,6 +4,8 @@ let playerMove = 'player1';
 
 let clss = '';
 
+let introduction = JSON.parse(localStorage.getItem('introduction'));
+
 let audioWin = new Audio('audio/level-win-6416.mp3');
 
 let audioLose = new Audio('audio/080047_lose_funny_retro_video-game-80925.mp3');
@@ -13,7 +15,7 @@ let intervalId;
 let tiles = ['', '', '', '', '', '', '', '', '', ''];
 let tileFree = [true, true, true, true, true, true, true, true, true];
 
-let score = JSON.parse(localStorage.getItem('score')) || 
+let score = JSON.parse(localStorage.getItem('score-pvp')) || 
 {
     wins: 0,
     losses: 0
@@ -21,10 +23,24 @@ let score = JSON.parse(localStorage.getItem('score')) ||
 
 let colour = localStorage.getItem('colour') || 'default';
 
+if(introduction)
+{
+    setTimeout(()=>
+    {
+        document.querySelector('.js-introduction').innerHTML = '';
+    }, 5000);
+    setBackground(colour, clss);
+    localStorage.removeItem('introduction');
+}
+else
+{
+    document.querySelector('.js-introduction').innerHTML = '';
+}
+
 setTimeout(()=>
 {
     document.querySelector('.js-introduction').innerHTML = '';
-}, 2500);
+}, 5000);
 setBackground(colour, clss);
 
 clss = setBackground(colour, clss);
@@ -51,73 +67,41 @@ document.querySelector('.js-options-new-game').addEventListener('mouseout', ()=>
 document.querySelector('.js-new-game-click').addEventListener('mouseover', ()=>
 {
     document.querySelector('.js-options-new-game').classList.add('options-div-hover');
-    document.querySelector('.js-options-new-game').innerHTML = `
-    <img class="icon" src="image/new-game-hover.png">
-    <div class="js-new-game">New Game</div>
-    `;
 })
 
 document.querySelector('.js-new-game-click').addEventListener('mouseout', ()=>
 {
    document.querySelector('.js-options-new-game').classList.remove('options-div-hover');
-    document.querySelector('.js-options-new-game').innerHTML = `
-    <img class="icon" src="image/newGame.png">
-    <div class="js-new-game">New Game</div>
-    `;
 });
 
 document.querySelector('.js-settings-click').addEventListener('mouseover', ()=>
 {
     document.querySelector('.js-options-settings').classList.add('options-div-hover');
-    document.querySelector('.js-options-settings').innerHTML = `
-    <img class="icon" src="image/settings-hover.png">
-    <div class="js-settings">Settings</div>
-    `;
 })
 
 document.querySelector('.js-settings-click').addEventListener('mouseout', ()=>
 {
     document.querySelector('.js-options-settings').classList.remove('options-div-hover');
-    document.querySelector('.js-options-settings').innerHTML = `
-    <img class="icon" src="image/settings.png">
-    <div class="js-settings">Settings</div>
-    `;
 });
 
 document.querySelector('.js-info-click').addEventListener('mouseover', ()=>
 {
     document.querySelector('.js-options-info').classList.add('options-div-hover');
-    document.querySelector('.js-options-info').innerHTML = `
-    <img class="icon" src="image/info-hover.png">
-    <div class="js-info">Info</div>
-    `;
 })
 
 document.querySelector('.js-info-click').addEventListener('mouseout', ()=>
 {
     document.querySelector('.js-options-info').classList.remove('options-div-hover');
-    document.querySelector('.js-options-info').innerHTML = `
-    <img class="icon" src="image/information.png">
-    <div class="js-info">Info</div>
-    `;
 });
 
 document.querySelector('.js-mode-click').addEventListener('mouseover', ()=>
 {
     document.querySelector('.js-options-mode').classList.add('options-div-hover');
-    document.querySelector('.js-options-mode').innerHTML = `
-    <img class="icon" src="image/controller-hover.png">
-    <div class="js-game-mode">Game Mode select</div>
-    `;
 })
 
 document.querySelector('.js-mode-click').addEventListener('mouseout', ()=>
 {
     document.querySelector('.js-options-mode').classList.remove('options-div-hover');
-    document.querySelector('.js-options-mode').innerHTML = `
-    <img class="icon" src="image/controller.png">
-    <div class="js-game-mode">Game Mode select</div>
-    `;
 });
 
 tileActivation();
@@ -128,129 +112,129 @@ function checkGamestatus()
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1');
+        winnerMessage('Player-O');
     }
     else if(tiles[3] === 'player1' && tiles[4] === 'player1' && tiles[5] === 'player1')
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1');
+        winnerMessage('Player-O');
     }
     else if(tiles[6] === 'player1' && tiles[7] === 'player1' && tiles[8] === 'player1')
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1');
+        winnerMessage('Player-O');
     }
     else if(tiles[0] === 'player1' && tiles[3] === 'player1' && tiles[6] === 'player1')
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1');
+        winnerMessage('Player-O');
     }
     else if( tiles[1] === 'player1' && tiles[4] === 'player1' && tiles[7] === 'player1')
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1');
+        winnerMessage('Player-O');
     }
     else if(tiles[2] === 'player1' && tiles[5] === 'player1' && tiles[8] === 'player1')
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1'); 
+        winnerMessage('Player-O'); 
     }
     else if(tiles[2] === 'player1' && tiles[4] === 'player1' && tiles[6] === 'player1')
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1');
+        winnerMessage('Player-O');
     }
     else if(tiles[0] === 'player1' && tiles[4] === 'player1' && tiles[8] === 'player1')
     {
         score.wins ++;
         document.querySelector('.js-player1-score-digit').innerHTML = `${score.wins}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 1');
+        winnerMessage('Player-O');
     }
     else if(tiles[0] === 'player2' &&  tiles[1] === 'player2' && tiles[2] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else if(tiles[3] === 'player2' && tiles[4] === 'player2' && tiles[5] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else if(tiles[6] === 'player2' && tiles[7] === 'player2' && tiles[8] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else if(tiles[0] === 'player2' && tiles[3] === 'player2' && tiles[6] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else if( tiles[1] === 'player2' && tiles[4] === 'player2' && tiles[7] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else if(tiles[2] === 'player2' && tiles[5] === 'player2' && tiles[8] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else if(tiles[2] === 'player2' && tiles[4] === 'player2' && tiles[6] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else if(tiles[0] === 'player2' && tiles[4] === 'player2' && tiles[8] === 'player2')
     {
         score.losses ++;
         document.querySelector('.js-player2-score-digit').innerHTML = `${score.losses}`;
-        localStorage.setItem('score', JSON.stringify(score));
+        localStorage.setItem('score-pvp', JSON.stringify(score));
         reset();
-        winnerMessage('Player 2');
+        winnerMessage('Player-X');
     }
     else
     {
@@ -283,7 +267,7 @@ function reset()
 document.querySelector('.js-new-game-click').addEventListener('click', ()=>
 {
     reset();
-    localStorage.removeItem('score');
+    localStorage.removeItem('score-pvp');
     score =
     {
         wins: 0,
@@ -443,14 +427,16 @@ function winnerMessage(winner)
         <div class="tile js-tile js-tile-color ${clss}" data-tile-no="8"></div>
         <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
     </div>
-    <div class="status-message">
+    <div class=" js-status-message status-message">
         <div class="status-message-inside-content">
             <div>${winner} wins!</div>
-            <img class="status-message-image js-message-image" src="image/well-done.png">
         </div>
     </div>
     `;
-    audioWin.play();
+    setTimeout(()=>
+    {
+        document.querySelector('.js-status-message').classList.add('fade-out');
+    }, 2000);
 
     setTimeout(()=>
     {
@@ -469,7 +455,7 @@ function winnerMessage(winner)
         <div class="temp-disable-div js-temp-disable"></div>
         `;
         tileActivation()
-    }, 5000);
+    }, 3000);
 }
 
 document.querySelector('.js-info-click').addEventListener('click', ()=>
