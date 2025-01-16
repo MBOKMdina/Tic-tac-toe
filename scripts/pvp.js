@@ -558,7 +558,7 @@ document.querySelector('.js-info-click').addEventListener('click', ()=>
 document.querySelector('.js-mode-click').addEventListener('click', ()=>
 {
     window.close('tic-tac-toe.html');
-    window.open('game-mode-selection.html');
+    window.open('index.html');
 });
 
 function tileActivation()
