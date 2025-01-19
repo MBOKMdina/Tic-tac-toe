@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "Tic-tac-toe",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.CustomBrowser": "chrome",
+		"liveServer.settings.port": 5503
+	}
+}

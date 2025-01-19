@@ -1,5 +1,25 @@
 import { setBackground } from "./colour.js";
-import { computerMove } from "./computerAgent.js";
+import { computerHard, computerStart, computerMedium, computerEasy} from "./computerAgent.js";
+
+let difficulty = localStorage.getItem('difficulty') || 'easy';
+
+let computerMove;
+
+if(difficulty === 'easy')
+{
+    computerMove = computerEasy;
+    document.querySelector('.js-title').innerHTML = 'Difficulty: Easy';
+}
+else if(difficulty === 'medium')
+{
+    computerMove = computerMedium;
+    document.querySelector('.js-title').innerHTML = 'Difficulty: Medium';
+}
+else if(difficulty === 'hard')
+{
+    computerMove = computerHard;
+    document.querySelector('.js-title').innerHTML = 'Difficulty: Hard';
+}
 
 let clss = '';
 
@@ -23,6 +43,7 @@ if(introduction)
     setTimeout(()=>
     {
         document.querySelector('.js-introduction').innerHTML = '';
+        tileActivation()
     }, 5000);
     setBackground(colour, clss);
     introduction = false;
@@ -31,6 +52,7 @@ if(introduction)
 else
 {
     document.querySelector('.js-introduction').innerHTML = '';
+    tileActivation();
 }
 
 clss = setBackground(colour, clss);
@@ -93,8 +115,6 @@ document.querySelector('.js-mode-click').addEventListener('mouseout', ()=>
 {
     document.querySelector('.js-options-mode').classList.remove('options-div-hover');
 });
-
-tileActivation();
 
 function checkGamestatus()
 {
@@ -252,6 +272,7 @@ function reset()
     {
         tile.innerHTML = '';
     })
+    whosMove();
 }
 
 document.querySelector('.js-new-game-click').addEventListener('click', ()=>
@@ -282,98 +303,57 @@ document.querySelector('.js-settings-click').addEventListener('click', ()=>
         <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
     </div>
     <div class="settings-ui">
-        <div class="deco-background">
-            <div class="close js-close">
-                <img class="close-btn-image" src="image/x.svg">
+        <div class="settings-heading">
+            <div class="settings">Settings</div>
+            <div class="x-div js-x-div">
+                <img class="x-img" src="image/x.svg">
             </div>
         </div>
-        <div class="settings-title"> Select background color</div>
-        <div class="color-palette">
-            <div class="default js-default"></div>
-            <div class="purple js-purple"></div>
-            <div class="blue js-blue"></div>
-            <div class="green js-green"></div>
-            <div class="black js-black"></div>
-            <div class="brown js-brown"></div>
-            <div class="orange js-orange"></div>
-            <div class="yellow js-yellow"></div>
-            <div class="white js-white"></div>
+        <div class="settings-content">
+            <div class="colour-div js-colour-div">Change background colour</div>
+            <div class="difficulty-div js-difficulty-div">Change difficulty level</div>
         </div>
     </div>
     `;
-    document.querySelector('.js-default').addEventListener('click', ()=>
+    closeWindowSettings();
+    document.querySelector('.js-difficulty-div').addEventListener('click', ()=>
     {
-        setBackground('default', clss);
-        colour = 'default';
-        localStorage.setItem('colour', colour);
-        clss = '';
-    });
-    
-    document.querySelector('.js-purple').addEventListener('click', ()=>
-    {
-        setBackground('purple', clss);
-        colour = 'purple';
-        localStorage.setItem('colour', colour);
-        clss = '';
-    });
-    
-    document.querySelector('.js-blue').addEventListener('click', ()=>
-    {
-        setBackground('blue', clss);;
-        colour = 'blue';
-        localStorage.setItem('colour', colour);
-        clss = '';
-    });
-
-    document.querySelector('.js-green').addEventListener('click', ()=>
-    {
-        setBackground('green', clss);
-        colour = 'green';
-        localStorage.setItem('colour', colour);
-        clss = '';
-    });
-    
-    document.querySelector('.js-black').addEventListener('click', ()=>
-    {
-        setBackground('black', clss);
-        colour = 'black';
-        localStorage.setItem('colour', colour);
-        clss = '';
+        document.querySelector('.js-containment-interface').innerHTML =
+        `
+        <div class="interface">
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="1"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="2"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="3"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="4"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="5"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="6"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="7"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="8"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
+        </div>
+        <div class="settings-ui-difficulty">
+            <div class="settings-heading">
+                <div class="settings-difficulty">Settings</div>
+                <div class="x-div js-x-div">
+                    <img class="x-img" src="image/x.svg">
+                </div>
+                <div class="previouse-div js-previouse-div">
+                    <img class="previouse-img" src="image/previouse-page.png">
+                </div>
+            </div>
+            <div class="settings-content">
+                <div class="difficulty-div js-easy">Easy</div>
+                <div class="difficulty-div js-medium">Medium</div>
+                <div class="difficulty-div js-hard">Hard</div>
+            </div>
+        </div>
+        `;
+        closeWindowSettings();
+        previousePage();
+        selectDifficulty();
     });
 
-    document.querySelector('.js-brown').addEventListener('click', ()=>
-    {
-        setBackground('brown', clss);
-        colour = 'brown';
-        localStorage.setItem('colour', colour);
-        clss = '';
-    });
-    
-    document.querySelector('.js-orange').addEventListener('click', ()=>
-    {
-        setBackground('orange', clss);
-        colour = 'orange';
-        localStorage.setItem('colour', colour);
-        clss = '';
-    });
-    
-    document.querySelector('.js-yellow').addEventListener('click', ()=>
-    {
-        setBackground('yellow', clss);
-        colour = 'yellow';
-        localStorage.setItem('colour', colour);
-        clss = 'tile-alternate';
-    });
-
-    document.querySelector('.js-white').addEventListener('click', ()=>
-    {
-        setBackground('white', clss);
-        colour = 'white';
-        localStorage.setItem('colour', colour);
-        clss = 'tile-alternate';
-    });
-    
-    document.querySelector('.js-close').addEventListener('click', ()=>
+    document.querySelector('.js-colour-div').addEventListener('click', ()=>
     {
         document.querySelector('.js-containment-interface').innerHTML=`
         <div class="interface">
@@ -387,9 +367,104 @@ document.querySelector('.js-settings-click').addEventListener('click', ()=>
             <div class="tile js-tile js-tile-color ${clss}" data-tile-no="8"></div>
             <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
         </div>
-        <div class="temp-disable-div js-temp-disable"></div>
+        <div class="settings-ui">
+            <div class="settings-heading">
+                <div class="settings">Settings</div>
+                <div class="x-div js-x-div">
+                    <img class="x-img" src="image/x.svg">
+                </div>
+                <div class="previouse-div js-previouse-div">
+                    <img class="previouse-img" src="image/previouse-page.png">
+                </div>
+            </div>
+            <div class="settings-content-colour">
+                <div class="color-palette">
+                    <div class="default js-default"></div>
+                    <div class="purple js-purple"></div>
+                    <div class="blue js-blue"></div>
+                    <div class="green js-green"></div>
+                    <div class="black js-black"></div>
+                    <div class="brown js-brown"></div>
+                    <div class="orange js-orange"></div>
+                    <div class="yellow js-yellow"></div>
+                    <div class="white js-white"></div>
+                </div>
+            </div>
+        </div>
         `;
-        tileActivation()
+        closeWindowSettings();
+        document.querySelector('.js-default').addEventListener('click', ()=>
+        {
+            setBackground('default', clss);
+            colour = 'default';
+            localStorage.setItem('colour', colour);
+            clss = '';
+        });
+        
+        document.querySelector('.js-purple').addEventListener('click', ()=>
+        {
+            setBackground('purple', clss);
+            colour = 'purple';
+            localStorage.setItem('colour', colour);
+            clss = '';
+        });
+        
+        document.querySelector('.js-blue').addEventListener('click', ()=>
+        {
+            setBackground('blue', clss);;
+            colour = 'blue';
+            localStorage.setItem('colour', colour);
+            clss = '';
+        });
+    
+        document.querySelector('.js-green').addEventListener('click', ()=>
+        {
+            setBackground('green', clss);
+            colour = 'green';
+            localStorage.setItem('colour', colour);
+            clss = '';
+        });
+        
+        document.querySelector('.js-black').addEventListener('click', ()=>
+        {
+            setBackground('black', clss);
+            colour = 'black';
+            localStorage.setItem('colour', colour);
+            clss = '';
+        });
+    
+        document.querySelector('.js-brown').addEventListener('click', ()=>
+        {
+            setBackground('brown', clss);
+            colour = 'brown';
+            localStorage.setItem('colour', colour);
+            clss = '';
+        });
+        
+        document.querySelector('.js-orange').addEventListener('click', ()=>
+        {
+            setBackground('orange', clss);
+            colour = 'orange';
+            localStorage.setItem('colour', colour);
+            clss = '';
+        });
+        
+        document.querySelector('.js-yellow').addEventListener('click', ()=>
+        {
+            setBackground('yellow', clss);
+            colour = 'yellow';
+            localStorage.setItem('colour', colour);
+            clss = 'tile-alternate';
+        });
+    
+        document.querySelector('.js-white').addEventListener('click', ()=>
+        {
+            setBackground('white', clss);
+            colour = 'white';
+            localStorage.setItem('colour', colour);
+            clss = 'tile-alternate';
+        });
+        previousePage();
     });
 
 });
@@ -545,6 +620,7 @@ document.querySelector('.js-mode-click').addEventListener('click', ()=>
 
 function tileActivation()
 {
+    whosMove();
     document.querySelectorAll(`.js-tile`).forEach((tile)=>
     {
         tile.addEventListener('click', ()=>
@@ -583,4 +659,254 @@ function tileActivation()
         });
     
     })
+}
+
+function closeWindowSettings()
+{
+    document.querySelector('.js-x-div').addEventListener('click', ()=>
+    {
+        document.querySelector('.js-containment-interface').innerHTML=`
+        <div class="interface">
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="1"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="2"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="3"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="4"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="5"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="6"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="7"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="8"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
+        </div>
+        <div class="temp-disable-div js-temp-disable"></div>
+        `;
+        tileActivation()
+    });
+}
+
+function previousePage()
+{
+    document.querySelector('.js-previouse-div').addEventListener('click', ()=>
+    {
+        document.querySelector('.js-containment-interface').innerHTML=`
+        <div class="interface">
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="1"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="2"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="3"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="4"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="5"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="6"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="7"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="8"></div>
+            <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
+        </div>
+        <div class="settings-ui">
+            <div class="settings-heading">
+                <div class="settings">Settings</div>
+                <div class="x-div js-x-div">
+                    <img class="x-img" src="image/x.svg">
+                </div>
+            </div>
+            <div class="settings-content">
+                <div class="colour-div js-colour-div">Change background colour</div>
+                <div class="difficulty-div js-difficulty-div">Change difficulty level</div>
+            </div>
+        </div>
+        `;
+        closeWindowSettings();
+        document.querySelector('.js-difficulty-div').addEventListener('click', ()=>
+        {
+            document.querySelector('.js-containment-interface').innerHTML =
+            `
+            <div class="interface">
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="1"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="2"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="3"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="4"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="5"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="6"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="7"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="8"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
+            </div>
+            <div class="settings-ui-difficulty">
+                <div class="settings-heading">
+                    <div class="settings-difficulty">Settings</div>
+                    <div class="x-div js-x-div">
+                        <img class="x-img" src="image/x.svg">
+                    </div>
+                    <div class="previouse-div js-previouse-div">
+                        <img class="previouse-img" src="image/previouse-page.png">
+                    </div>
+                </div>
+                <div class="settings-content">
+                    <div class="difficulty-div js-easy">Easy</div>
+                    <div class="difficulty-div js-medium">Medium</div>
+                    <div class="difficulty-div js-hard">Hard</div>
+                </div>
+            </div>
+            `;
+            closeWindowSettings();
+            previousePage();
+            selectDifficulty();
+        });
+    
+        document.querySelector('.js-colour-div').addEventListener('click', ()=>
+        {
+            document.querySelector('.js-containment-interface').innerHTML=`
+            <div class="interface">
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="1"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="2"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="3"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="4"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="5"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="6"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="7"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="8"></div>
+                <div class="tile js-tile js-tile-color ${clss}" data-tile-no="9"></div>
+            </div>
+            <div class="settings-ui">
+                <div class="settings-heading">
+                    <div class="settings">Settings</div>
+                    <div class="x-div js-x-div">
+                        <img class="x-img" src="image/x.svg">
+                    </div>
+                    <div class="previouse-div js-previouse-div">
+                        <img class="previouse-img" src="image/previouse-page.png">
+                    </div>
+                </div>
+                <div class="settings-content-colour">
+                    <div class="color-palette">
+                        <div class="default js-default"></div>
+                        <div class="purple js-purple"></div>
+                        <div class="blue js-blue"></div>
+                        <div class="green js-green"></div>
+                        <div class="black js-black"></div>
+                        <div class="brown js-brown"></div>
+                        <div class="orange js-orange"></div>
+                        <div class="yellow js-yellow"></div>
+                        <div class="white js-white"></div>
+                    </div>
+                </div>
+            </div>
+            `;
+            closeWindowSettings();
+            document.querySelector('.js-default').addEventListener('click', ()=>
+            {
+                setBackground('default', clss);
+                colour = 'default';
+                localStorage.setItem('colour', colour);
+                clss = '';
+            });
+            
+            document.querySelector('.js-purple').addEventListener('click', ()=>
+            {
+                setBackground('purple', clss);
+                colour = 'purple';
+                localStorage.setItem('colour', colour);
+                clss = '';
+            });
+            
+            document.querySelector('.js-blue').addEventListener('click', ()=>
+            {
+                setBackground('blue', clss);;
+                colour = 'blue';
+                localStorage.setItem('colour', colour);
+                clss = '';
+            });
+        
+            document.querySelector('.js-green').addEventListener('click', ()=>
+            {
+                setBackground('green', clss);
+                colour = 'green';
+                localStorage.setItem('colour', colour);
+                clss = '';
+            });
+            
+            document.querySelector('.js-black').addEventListener('click', ()=>
+            {
+                setBackground('black', clss);
+                colour = 'black';
+                localStorage.setItem('colour', colour);
+                clss = '';
+            });
+        
+            document.querySelector('.js-brown').addEventListener('click', ()=>
+            {
+                setBackground('brown', clss);
+                colour = 'brown';
+                localStorage.setItem('colour', colour);
+                clss = '';
+            });
+            
+            document.querySelector('.js-orange').addEventListener('click', ()=>
+            {
+                setBackground('orange', clss);
+                colour = 'orange';
+                localStorage.setItem('colour', colour);
+                clss = '';
+            });
+            
+            document.querySelector('.js-yellow').addEventListener('click', ()=>
+            {
+                setBackground('yellow', clss);
+                colour = 'yellow';
+                localStorage.setItem('colour', colour);
+                clss = 'tile-alternate';
+            });
+        
+            document.querySelector('.js-white').addEventListener('click', ()=>
+            {
+                setBackground('white', clss);
+                colour = 'white';
+                localStorage.setItem('colour', colour);
+                clss = 'tile-alternate';
+            });
+            previousePage();
+        });
+    });
+}
+
+function selectDifficulty()
+{
+    document.querySelector('.js-easy').addEventListener('click', ()=>
+    {
+        computerMove = computerEasy;
+        document.querySelector('.js-title').innerHTML = 'Difficulty: Easy';
+        difficulty = 'easy';
+        localStorage.setItem('difficulty', difficulty);
+    });
+
+    document.querySelector('.js-hard').addEventListener('click', ()=>
+    {
+        computerMove = computerEasy;
+        document.querySelector('.js-title').innerHTML = 'Difficulty: Hard';
+        difficulty = 'hard';
+        localStorage.setItem('difficulty', difficulty);
+    });
+
+    document.querySelector('.js-medium').addEventListener('click', ()=>
+    {
+        computerMove = computerEasy;
+        document.querySelector('.js-title').innerHTML = 'Difficulty: Medium';
+        difficulty = 'medium';
+        localStorage.setItem('difficulty', difficulty);
+    });
+}
+
+function whosMove()
+{
+    if(difficulty === 'hard')
+    {
+        computerStart(tiles, tileFree);
+    }
+    else if(difficulty === 'medium')
+    {
+        let number = Math.random()*2
+        let fiftyfifty = Math.floor(number);
+        if(fiftyfifty === 1)
+        {
+            computerStart(tiles, tileFree);
+        }
+
+    }
 }
