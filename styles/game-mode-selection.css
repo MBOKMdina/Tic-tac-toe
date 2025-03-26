@@ -246,6 +246,13 @@ body
         margin-left: 20px;
     }
 
+    .pvp,
+    .pvc
+    {
+        width: 231.74px;
+        justify-content: left;
+    }
+
     .details
     {
         margin-top: 0px;
