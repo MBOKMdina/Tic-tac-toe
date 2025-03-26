@@ -986,4 +986,19 @@
     }
 }
 
+@media(max-width: 981px) and (max-height: 451px)
+{
+    .options
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 35px;
+        height: 120px;
+    }
 
+    .options-div
+    {
+        padding: 5px;
+        height: 25px;
+    }
+}
