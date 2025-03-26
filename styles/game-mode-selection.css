@@ -77,7 +77,6 @@ body
 
 .pvp
 {
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
 }
@@ -147,6 +146,11 @@ body
     height: 100px;
     border-top: groove;
     border-width: 10px;
+}
+
+.buttons-container
+{
+    padding-top: 30px;
 }
 
 @media(max-width: 981px) and (min-height: 1200px)
@@ -222,4 +226,28 @@ body
         margin-bottom: 65px;
     }
 
+}
+
+@media(max-width: 981px) and (max-height: 451px)
+{
+    .heading
+    {
+        font-size: 40px;
+        margin-top: 0px;
+    }
+
+    .buttons-container
+    {
+        display: flex;
+    }
+
+    .pvc
+    {
+        margin-left: 20px;
+    }
+
+    .details
+    {
+        margin-top: 0px;
+    }
 }
