@@ -1,0 +1,418 @@
+.interface
+{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    column-gap: 16px;
+    row-gap: 16px;
+    height: 482px;
+}
+
+.tile
+{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tile-alternate
+{
+    background-color: lightgrey;
+    width: 150px;
+    height: 150px;
+}
+
+.grow
+{
+    animation: grow 0.5s
+}
+
+.move
+{
+    width: 150px;
+    height: 150px;
+}
+
+.back-ground
+{
+    background-color: grey;
+}
+
+.purple-back-ground
+{
+    background-color: purple;
+}
+
+.blue-back-ground
+{
+    background-color: blue;
+}
+
+.green-back-ground
+{
+    background-color: green;
+}
+
+.black-back-ground
+{
+    background-color: black;
+}
+
+.brown-back-ground
+{
+    background-color: brown;
+}
+
+.orange-back-ground
+{
+    background-color: orange;
+}
+
+.yellow-back-ground
+{
+    background-color: yellow;
+}
+
+.white-back-ground
+{
+    background-color: white;
+}
+
+
+.containment-interface
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 500px;
+    z-index: 2;
+}
+
+.title
+{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    font-family: fantasy;
+    top: 8px;
+    left: 30px;
+}
+
+.title-black
+{
+    font-size: 50px;
+    color: black;
+}
+
+.vs
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 80px;
+}
+
+.status-message
+{
+    font-family: fantasy;
+    position: absolute;
+    height: 100px;
+    width: 400px;
+    background-color: darkgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    border: solid;
+    border-style: inset;
+    border-width: 10px;
+    border-color: gray;
+    animation: slide-down 1s;
+}
+
+.fade-out 
+{
+    opacity: 0;
+    transition: 1s;
+}
+
+.status-message-image
+{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+.status-message-inside-content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.deco
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    background-color: lightgray;
+    border-bottom: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.deco2
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    background-color: lightgray;
+    border-top: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.disable
+{
+    width: 482px;
+    height: 482px;
+    position: absolute;
+}
+
+.temp-disable-div
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.background2
+{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.7;
+    z-index: 4;
+}
+
+.game-start-envelope
+{
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+    animation: slide-in 5s;
+    transform: translateX(100%);
+  
+}
+
+.game-start
+{
+    font-family: fantasy;
+    /*font-family: 'Bebas Neue';*/
+    /*font-family: 'Bauhaus 93';*/
+    color: white;
+    font-size: 50px;
+    position: relative;
+}
+
+@keyframes laugh
+{
+    0%
+    {
+        height: 50px;
+        width: 50px;
+    }
+
+    50%
+    {
+        height: 60px;
+        width: 60px;
+    }
+
+    100%
+    {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@keyframes grow
+{
+    0%
+    {
+        height: 0px;
+        width: 0px;
+    }
+
+    100%
+    {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@keyframes growResponsive
+{
+    0%
+    {
+        height: 0px;
+        width: 0px;
+    }
+
+    100%
+    {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@keyframes slide-in
+{
+    0%
+    {
+        transform: translateX(-100%);
+    }
+
+    25%
+    {
+        transform: translateX(0%);
+    }
+
+    50%
+    {
+        transform: translateX(0%);
+    }
+
+    75%
+    {
+        transform: translateX(0%);
+    }
+
+    100%
+    {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slide-down
+{
+    0%
+    {
+        transform: translateY(-100%);
+    }
+
+    100%
+    {
+        transform: translateY(0%);
+    }
+}
+
+@media(max-width: 981px) and (min-height: 1200px)
+{
+    .containment-interface
+    {
+        top: 429.2px;
+        bottom: 286.4px;
+        left: 0px;
+    }
+
+    .title
+    {
+        font-size: 50px;
+        color: white;
+        position: absolute;
+        font-family: fantasy;
+        left: 30px;;
+        /*margin-left: -185.905px;*/
+    }
+
+    .interface
+    {
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        column-gap: 16px;
+        row-gap: 16px;
+        height: 482px;
+    }
+}
+
+@media(max-height: 1400px) and (max-width: 981px)
+{
+    .containment-interface
+    {
+        top: 354.8px;
+    }
+
+    .title
+    {
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width: 981px) and (max-height: 593.7px)
+{
+    .containment-interface
+    {
+        left: 333px;
+    }
+
+    .interface
+    {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        column-gap: 11px;
+        row-gap: 11px;
+        height: 322px;
+    }
+
+    .tile
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    .grow
+    {
+        animation: growResponsive 0.5s;
+    }
+
+    .move
+    {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media(max-width: 981px) and (max-height: 1200px)
+{
+    .containment-interface
+    {
+        top: 0px;
+        left: 333px;
+    }
+}

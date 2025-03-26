@@ -2,17 +2,38 @@
 <html>
     <head>
         <title>pvc</title>
-        <link rel="stylesheet" href="styles/tic-tac-toe.css">
+        <link rel="stylesheet" href="styles/game.css">
+        <link rel="stylesheet" href="styles/side-bar.css">
     </head>
     <body class="back-ground js-body">
+        <div class="scoreBar-APK">
+            <div>
+                <p class="score-title-APK">Score:</p>
+                <div class="score-div-APK">
+                    <div class="you-APK">
+                        <div class="player-title-APK">Player</div>
+                        <div class="score-digit-APK js-player-score-digit">0</div>
+                        <img class="profile-picture-APK" src="image/player1.png">
+                    </div>
+                    <div class="vs-APK">
+                        <img class="vs-image-APK" src="image/versus.png">
+                    </div>
+                    <div class="comp-APK">
+                        <div class="player-title-APK">Computer</div>
+                        <div class="score-digit-APK js-comp-score-digit">0</div>
+                        <img class="profile-picture-APK" src="image/computer.png">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="js-introduction">
             <div class="background2"></div>
             <div class="game-start-envelope">
                 <div class="game-start">Player vs. computer!</div>
             </div>
         </div>
-        <div class="title js-title">Difficulty: Easy</div>
         <div class="containment-interface js-containment-interface">
+            <div class="title js-title">Difficulty: Easy</div>
             <div class="interface">
                 <div class="tile js-tile js-tile-color" data-tile-no="1"></div>
                 <div class="tile js-tile js-tile-color" data-tile-no="2"></div>
@@ -47,28 +68,53 @@
                 <div class="options">
                     <div class="options-div js-options-new-game">
                         <img class="icon" src="image/newGame.png">
-                        <div class="js-new-game">New Game</div>
+                        New Game
                     </div>
                     <div class="text-click-game js-new-game-click"></div>
                     <div class="options-div js-options-settings">
                         <img class="icon" src="image/settings.png">
-                        <div class="js-settings">Settings</div>
+                        Settings
                     </div>
                     <div class="text-click-settings js-settings-click"></div>
                     <div class="options-div js-options-info">
                         <img class="icon" src="image/information.png">
-                        <div class="js-info">info</div>
+                        info
                     </div>
                     <div class="text-click-info js-info-click"></div>
                     <div class="options-div js-options-mode">
                         <img class="icon" src="image/controller.png">
-                        <div class="js-game-mode">Game Mode select</div>
+                        Game Mode
                     </div>
                     <div class="text-click-mode js-mode-click"></div>
                 </div>
                 <div class="slogan">Mdina development-#Building the nation</div>
             </div>
         </div>
+        <div class="options-APK">
+            <div class="options-container-APK">
+                <div class="options-div-APK js-options-new-game">
+                    <img class="icon-APK" src="image/newGame.png">
+                    New Game
+                </div>
+
+                <div class="options-div-APK js-options-settings">
+                    <img class="icon-APK" src="image/settings.png">
+                    Settings
+                </div>
+
+                <div class="options-div-APK js-options-info">
+                    <img class="icon-APK" src="image/information.png">
+                    info
+                </div>
+
+                <div class="options-div-APK js-options-mode">
+                    <img class="icon-APK" src="image/controller.png">
+                    Game Mode
+                </div>
+            </div>
+            <div class="slogan-APK">Mdina development-#Building the nation</div>
+        </div>
         <script type="module" src="scripts/pvc.js"></script>
+        <script type="module" src="scripts/APK-functions.js"></script>
     </body>
 </html>

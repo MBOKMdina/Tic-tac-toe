@@ -21,16 +21,19 @@
     top: 0px;
     bottom: 0px;
     background-color: blue;
+    background: linear-gradient(to bottom, #0000ff, #4b0082);
+    z-index: 0;
 }
 
 .details
 {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 90px;
     position: fixed;
     width: 2000px;
+    z-index: 1;
 }
 
 body
@@ -45,24 +48,31 @@ body
     color: white;
     font-size: 30px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-around;
 }
 
 .pvp,
 .pvc
 {
-    background-color: blue;
-    color: white;
-    height: 50px;
-    width: 250px;
+    color: black;
+    height: 20px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: light;
     border: none;
     cursor: pointer;
     margin-bottom: 20px;
-    width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: silver;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pvc
+{
+    margin-bottom: 0px;
 }
 
 .pvp
@@ -75,7 +85,7 @@ body
 .pvp:hover,
 .pvc:hover
 {
-    background-color: rgb(0, 81, 255);
+    background-color: rgb(91, 91, 91);
     transition: 0.5s;
     border-radius: 5px;
 }
@@ -85,6 +95,7 @@ body
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .pvp-text,
@@ -96,6 +107,119 @@ body
 .pvp-icon,
 .pvc-icon
 {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
+}
+
+.half-page
+{
+    background-color: lightgray;
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: groove;
+    border-width: 10px;
+}
+
+.selection-container
+{
+    background-color: darkgray;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 33px;
+    margin-top: -150px;
+    box-shadow: 5px 5px 20px black;
+}
+
+.decorative-stripe
+{
+    background-color: darkgray;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    bottom: 0px;
+    height: 100px;
+    border-top: groove;
+    border-width: 10px;
+}
+
+@media(max-width: 981px) and (min-height: 1200px)
+{
+    .half-page
+    {
+        background-color: lightgray;
+        width: 100%;
+        height: 500px;
+        position: fixed;
+        bottom: 0px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-width: 30px;
+    }
+
+    .selection-container
+    {
+        background-color: darkgray;
+        width: 600px;
+        height: 400px;
+        padding: 100px;
+        margin-top: -200px;
+        box-shadow: 5px 5px 20px black;
+    }
+    .heading
+    {
+        width: 900px;
+        text-align: center;
+        margin-bottom: 165px;
+        font-size: 70px;
+    }
+
+    .main-page-icon
+    {
+        width: 600px;
+        height: 600px;
+        margin-bottom: 80px;
+    }
+
+    .nav-instructions
+    {
+        font-size: 65px;
+    }
+
+    .pvp-text,
+    .pvc-text
+    {
+        font-size: 40px;
+        margin-left: 10px;
+    }
+
+    .pvp-icon,
+    .pvc-icon
+    {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pvp,
+    .pvc
+    {
+        height: 60px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .pvp
+    {
+        margin-top: 60px;
+        margin-bottom: 65px;
+    }
+
 }

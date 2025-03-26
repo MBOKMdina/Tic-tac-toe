@@ -1,4 +1,4 @@
-export function setBackground(colour, clss)
+export function setBackground(colour)
 {
     if(colour === 'default')
     {
@@ -47,7 +47,6 @@ export function setBackground(colour, clss)
             if(tile[i].classList.contains('tile-alternate'))
             {
                 tile[i].classList.remove('tile-alternate');
-                clss = '';
             }
         }
     }
@@ -95,7 +94,6 @@ export function setBackground(colour, clss)
             if(tile[i].classList.contains('tile-alternate'))
             {
                 tile[i].classList.remove('tile-alternate');
-                clss = '';
             }
         }
     }
@@ -143,7 +141,6 @@ export function setBackground(colour, clss)
             if(tile[i].classList.contains('tile-alternate'))
             {
                 tile[i].classList.remove('tile-alternate');
-                clss = '';
             }
         }
     }
@@ -191,7 +188,6 @@ export function setBackground(colour, clss)
             if(tile[i].classList.contains('tile-alternate'))
             {
                 tile[i].classList.remove('tile-alternate');
-                clss = '';
             }
         }
     }
@@ -239,7 +235,6 @@ export function setBackground(colour, clss)
             if(tile[i].classList.contains('tile-alternate'))
             {
                 tile[i].classList.remove('tile-alternate');
-                clss = '';
             }
         }
     }
@@ -287,7 +282,6 @@ export function setBackground(colour, clss)
             if(tile[i].classList.contains('tile-alternate'))
             {
                 tile[i].classList.remove('tile-alternate');
-                clss = '';
             }
         }
     }
@@ -339,7 +333,6 @@ export function setBackground(colour, clss)
             if(tile[i].classList.contains('tile-alternate'))
             {
                 tile[i].classList.remove('tile-alternate');
-                clss = '';
             }
         }
     }
@@ -395,10 +388,8 @@ export function setBackground(colour, clss)
             else
             {
                 tile[i].classList.add('tile-alternate');
-                clss = 'tile-alternate';
             }
         }
-        return clss = 'tile-alternate';
     }
     else if(colour === 'white')
     {
@@ -452,10 +443,8 @@ export function setBackground(colour, clss)
             else
             {
                 tile[i].classList.add('tile-alternate');
-                clss = 'tile-alternate';
             }
         }
-        return clss = 'tile-alternate';
     }
 }
 
