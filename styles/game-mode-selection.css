@@ -77,6 +77,7 @@ body
 
 .pvp
 {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
 }
@@ -234,27 +235,17 @@ body
     {
         font-size: 40px;
         margin-top: 0px;
-    }
-
-    .buttons-container
-    {
-        display: flex;
-    }
-
-    .pvc
-    {
-        margin-left: 20px;
-    }
-
-    .pvp,
-    .pvc
-    {
-        width: 231.74px;
-        justify-content: left;
+        height: 60px;
     }
 
     .details
     {
         margin-top: 0px;
+    }
+
+    .main-page-icon
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
