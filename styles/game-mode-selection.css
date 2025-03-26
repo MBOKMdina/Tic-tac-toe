@@ -233,7 +233,6 @@ body
 {
     .heading
     {
-        font-size: 40px;
         margin-top: 0px;
         height: 60px;
     }
@@ -245,7 +244,27 @@ body
 
     .main-page-icon
     {
-        margin-top: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .pvp
+    {
+        margin-top: 0px;
+    }
+
+    .nav-instructions
+    {
+        font-size: 30px;
         margin-bottom: 10px;
     }
 }
+
+@media(max-width: 1107.20px) and (max-height: 600px)
+{
+    .heading
+    {
+        font-size: 40px;
+    }
+}
+
