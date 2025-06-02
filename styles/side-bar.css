@@ -210,11 +210,16 @@
     transition: 0.5s;
 }
 
-.x-img,
-.previouse-img
+.x-img
 {
     width: 10px;
     height: 10px;
+}
+
+.previouse-img
+{
+    width: 12px;
+    height: 12px;
 }
 
 .x-info
@@ -600,11 +605,16 @@
         font-size: 48px;
     }
 
-    .x-img,
-    .previouse-img
+    .x-img
     {
         width: 30px;
         height: 30px;
+    }
+
+    .previouse-img
+    {
+        width: 36px;
+        height: 36px;
     }
 
     .x-div

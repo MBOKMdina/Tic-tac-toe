@@ -437,7 +437,7 @@ function tileActivation()
             let tileIndex = tile.dataset.tileNo - 1;
             if(tileFree[tileIndex])
             {
-                tile.innerHTML = `<img class="js-move grow move" src="image/tic-tac-circle.webp">`;
+                tile.innerHTML = `<img class="js-move grow move" src="image/tic-tac-circle.png">`;
                 tileFree[tileIndex] = false;
                 tiles[tileIndex] = 'player-move';
                 technicalities();
@@ -520,7 +520,7 @@ function previousePage()
             <div class="settings-heading">
                 <div class="settings">Settings</div>
                 <div class="x-div js-x-div">
-                    <img class="x-img" src="image/x.svg">
+                    <img class="x-img" src="image/x.png">
                 </div>
             </div>
             <div>
@@ -550,7 +550,7 @@ function previousePage()
                 <div class="settings-heading">
                     <div class="settings-difficulty">Settings</div>
                     <div class="x-div js-x-div">
-                        <img class="x-img" src="image/x.svg">
+                        <img class="x-img" src="image/x.png">
                     </div>
                     <div class="previouse-div js-previouse-div">
                         <img class="previouse-img" src="image/previouse-page.png">
@@ -587,7 +587,7 @@ function previousePage()
                 <div class="settings-heading">
                     <div class="settings">Settings</div>
                     <div class="x-div js-x-div">
-                        <img class="x-img" src="image/x.svg">
+                        <img class="x-img" src="image/x.png">
                     </div>
                     <div class="previouse-div js-previouse-div">
                         <img class="previouse-img" src="image/previouse-page.png">
@@ -771,7 +771,7 @@ function settingsClick()
         <div class="settings-heading">
             <div class="settings">Settings</div>
             <div class="x-div js-x-div">
-                <img class="x-img" src="image/x.svg">
+                <img class="x-img" src="image/x.png">
             </div>
         </div>
         <div>
@@ -801,7 +801,7 @@ function settingsClick()
             <div class="settings-heading">
                 <div class="settings-difficulty">Settings</div>
                 <div class="x-div js-x-div">
-                    <img class="x-img" src="image/x.svg">
+                    <img class="x-img" src="image/x.png">
                 </div>
                 <div class="previouse-div js-previouse-div">
                     <img class="previouse-img" src="image/previouse-page.png">
@@ -838,7 +838,7 @@ function settingsClick()
             <div class="settings-heading">
                 <div class="settings">Settings</div>
                 <div class="x-div js-x-div">
-                    <img class="x-img" src="image/x.svg">
+                    <img class="x-img" src="image/x.png">
                 </div>
                 <div class="previouse-div js-previouse-div">
                     <img class="previouse-img" src="image/previouse-page.png">
@@ -962,54 +962,49 @@ function infoClick()
                 All icons/images used in this program were sourced from google and is not my own design. A list of references is provided below
                 <br>
                 <br>
-                Settings icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a>
-                <br>
-                <a href="https://www.flaticon.com/free-icons/gear" title="gear icons">Gear icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icon/setting_2040504?term=settings&page=1&position=1&origin=tag&related_id=2040504" title="settings icons">Settings icon</a>
                 <br>
                 <br>
-                VS icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/vs" title="vs icons">Vs icons created by The Icon Tree - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icon/versus_14611398?term=vs&page=1&position=7&origin=tag&related_id=14611398" title="vs icons">Vs icon</a>
                 <br>
                 <br>
-                New game icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/new" title="new icons">New icons created by Freepik - Flaticon</a>
-                <br>
-                <a href="https://www.flaticon.com/free-icons/add-list" title="add list icons">Add list icons created by HideMaru - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icon/add-post_11366824?term=add+list&page=1&position=5&origin=tag&related_id=11366824" title="add list icons">Start new game icon</a>
                 <br>
                 <br>
-                Info icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/information" title="information icons">Information icons created by Freepik - Flaticon</a>
-                <br>
-                <a href="https://www.flaticon.com/free-icons/info" title="info icons">Info icons created by Pixel perfect - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icon/information_545674?term=information&page=1&position=5&origin=tag&related_id=545674" title="information icons">information icon</a>
                 <br>
                 <br>
-                Lauging emoji icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/laugh" title="laugh icons">Laugh icons created by Smashicons - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icon/profile-picture_12225935" title="profile picture icons">Player profile picture icon</a>
                 <br>
                 <br>
-                Geek emoji icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/geek" title="geek icons">Geek icons created by Freepik - Flaticon</a>
-                <br>
-                Player icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/profile-picture" title="profile picture icons">Profile picture icons created by Md Tanvirul Haque - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icon/keyboard-and-mouse_18258975?term=keyboard+and+mouse&page=1&position=79&origin=search&related_id=18258975" title="keyboard icons">PC profile picture icon</a>
                 <br>
                 <br>
-                Comptuer icon:
-                <br>
-                <a href="https://www.flaticon.com/free-icons/keyboard" title="keyboard icons">Keyboard icons created by Freepik - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icon/left-arrow_2926229?term=double+back+arrow&page=4&position=18&origin=search&related_id=2926229" title="left arrow icons">double back arrow decorative</a>
                 <br>
                 <br>
-                Double back icon:
+                <a href="https://www.flaticon.com/free-icon/remote-control_1758162?term=controller&page=2&position=55&origin=search&related_id=1758162" title="vr gaming icons">back to gamemode select creen icon</a>
                 <br>
-                <a href="https://www.flaticon.com/free-icons/left-arrow" title="left arrow icons">Left arrow icons created by Ayub Irawan - Flaticon</a>
+                <br>
+                <a href="https://www.flaticon.com/free-icon/arrow_5772124?term=back+arrow&page=2&position=7&origin=search&related_id=5772124" title="back arrow icons">previouse window icon</a>
+                <br>
+                <br>
+                <a href="https://www.flaticon.com/free-icon/tic-tac-toe_13072605?term=tic+tac+toe&page=1&position=26&origin=tag&related_id=13072605" title="tic tac toe icons">tic tac toe poster image</a>
+                <br>
+                <br>
+                <a href="https://www.flaticon.com/free-icon/versus_6327905" title="versus icons">player vs player icon</a>
+                <br>
+                <br>
+                <a href="https://www.flaticon.com/free-icon/desktop-computer_2704234?term=computer&page=1&position=35&origin=tag&related_id=2704234" title="computer icons">player vs computer icon</a>
+                <br>
+                <br>
+                <a href="https://www.flaticon.com/free-icon/cancel_722133?term=close&page=1&position=74&origin=search&related_id=722133" title="close icons">Close UI icon</a>
+                <br>
+                <br>
+                <a href="https://commons.wikimedia.org/wiki/File:NotoSans_-_Cancellation_X_-_1F5D9.svg" title="x-icon">X-move</a>
+                <br>
+                <br>
+                <a href="https://pngimg.com/image/87386" title="o-icon">O-move</a>
             </p>
         </div>
     </div>`;

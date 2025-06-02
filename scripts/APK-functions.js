@@ -1,4 +1,4 @@
-import './pvc.js'
+/*import './pvc.js'*/
 
 let newGame = document.querySelectorAll(".js-options-new-game")
 
@@ -30,7 +30,7 @@ settings.forEach((settingsDiv)=>
     });
     
     settingsDiv.addEventListener("touchcancel", () => {
-        gsettingsDiv.classList.remove("options-hoverDiv-APK");
+        settingsDiv.classList.remove("options-hoverDiv-APK");
     });
 })
 

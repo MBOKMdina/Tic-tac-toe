@@ -17,3 +17,9 @@ document.querySelector('.js-pvp').addEventListener('click', ()=>
     window.close('index.html');
     window.open('pvp.html');
 });
+
+window.addEventListener("orientationchange", function() {
+if (screen.orientation.angle !== 0) {
+    screen.orientation.lock("portrait").catch(err => console.log(err));
+}
+})
