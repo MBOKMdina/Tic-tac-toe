@@ -58,7 +58,7 @@ document.querySelectorAll('.js-player1-score-digit').forEach((player1Score)=>
 /*document.querySelector('.js-options-new-game').addEventListener('mouseover', ()=>
 {
     document.querySelector('.js-options-new-game').innerHTML = `
-    <img class="icon" src="image/new-game-hover.png">
+    <img class="icon" src="image/new-game-hover.webp">
     <div class="js-new-game">New Game</div>
     `;
 })
@@ -66,7 +66,7 @@ document.querySelectorAll('.js-player1-score-digit').forEach((player1Score)=>
 document.querySelector('.js-options-new-game').addEventListener('mouseout', ()=>
 {
     document.querySelector('.js-options-new-game').innerHTML = `
-    <img class="icon" src="image/newGame.png">
+    <img class="icon" src="image/newGame.webp">
     <div class="js-new-game">New Game</div>
     `;
 });*/
@@ -429,7 +429,7 @@ function tileActivation()
             if(tileFree[tileIndex] && playerMove === 'player2')
             {
                 playerMove = 'player1';
-                tile.innerHTML = `<img class="js-move grow move" src="image/tic-tac-x.png">`;
+                tile.innerHTML = `<img class="js-move grow move" src="image/tic-tac-x.webp">`;
                 tileFree[tileIndex] = false;
                 tiles[tileIndex] = 'player2';
                 technicalities();
@@ -518,7 +518,7 @@ function previousePage()
                         <img class="x-img" src="image/x.svg">
                     </div>
                     <div class="previouse-div js-previouse-div">
-                        <img class="previouse-img" src="image/previouse-page.png">
+                        <img class="previouse-img" src="image/previouse-page.webp">
                     </div>
                 </div>
                 <div>
@@ -555,7 +555,7 @@ function previousePage()
                         <img class="x-img" src="image/x.svg">
                     </div>
                     <div class="previouse-div js-previouse-div">
-                        <img class="previouse-img" src="image/previouse-page.png">
+                        <img class="previouse-img" src="image/previouse-page.webp">
                     </div>
                 </div>
                 <div class="settings-content-colour">
@@ -798,7 +798,7 @@ function infoClick()
         <div class="info-heading">
             <div class="x-info-div js-close">
                 <div class="x-info-container">
-                    <img class="x-info" src="image/double-back-arrow.png">
+                    <img class="x-info" src="image/double-back-arrow.webp">
                 </div>
                 <div class="x-info-text">Back</div>
             </div>
@@ -851,7 +851,7 @@ function infoClick()
                 <a href="https://commons.wikimedia.org/wiki/File:NotoSans_-_Cancellation_X_-_1F5D9.svg" title="x-icon">X-move</a>
                 <br>
                 <br>
-                <a href="https://pngimg.com/image/87386" title="o-icon">O-move</a>
+                <a href="https://webpimg.com/image/87386" title="o-icon">O-move</a>
             </p>
         </div>
     </div>`;

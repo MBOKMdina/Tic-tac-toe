@@ -77,7 +77,7 @@ document.querySelectorAll('.js-player-score-digit').forEach((playerScore)=>
 /*document.querySelector('.js-options-new-game').addEventListener('mouseover', ()=>
 {
     document.querySelector('.js-options-new-game').innerHTML = `
-    <img class="icon" src="image/new-game-hover.png">
+    <img class="icon" src="image/new-game-hover.webp">
     <div class="js-new-game">New Game</div>
     `;
 })
@@ -85,7 +85,7 @@ document.querySelectorAll('.js-player-score-digit').forEach((playerScore)=>
 document.querySelector('.js-options-new-game').addEventListener('mouseout', ()=>
 {
     document.querySelector('.js-options-new-game').innerHTML = `
-    <img class="icon" src="image/newGame.png">
+    <img class="icon" src="image/newGame.webp">
     <div class="js-new-game">New Game</div>
     `;
 });*/
@@ -437,7 +437,7 @@ function tileActivation()
             let tileIndex = tile.dataset.tileNo - 1;
             if(tileFree[tileIndex])
             {
-                tile.innerHTML = `<img class="js-move grow move" src="image/tic-tac-circle.png">`;
+                tile.innerHTML = `<img class="js-move grow move" src="image/tic-tac-circle.webp">`;
                 tileFree[tileIndex] = false;
                 tiles[tileIndex] = 'player-move';
                 technicalities();
@@ -520,7 +520,7 @@ function previousePage()
             <div class="settings-heading">
                 <div class="settings">Settings</div>
                 <div class="x-div js-x-div">
-                    <img class="x-img" src="image/x.png">
+                    <img class="x-img" src="image/x.webp">
                 </div>
             </div>
             <div>
@@ -550,10 +550,10 @@ function previousePage()
                 <div class="settings-heading">
                     <div class="settings-difficulty">Settings</div>
                     <div class="x-div js-x-div">
-                        <img class="x-img" src="image/x.png">
+                        <img class="x-img" src="image/x.webp">
                     </div>
                     <div class="previouse-div js-previouse-div">
-                        <img class="previouse-img" src="image/previouse-page.png">
+                        <img class="previouse-img" src="image/previouse-page.webp">
                     </div>
                 </div>
                 <div>
@@ -587,10 +587,10 @@ function previousePage()
                 <div class="settings-heading">
                     <div class="settings">Settings</div>
                     <div class="x-div js-x-div">
-                        <img class="x-img" src="image/x.png">
+                        <img class="x-img" src="image/x.webp">
                     </div>
                     <div class="previouse-div js-previouse-div">
-                        <img class="previouse-img" src="image/previouse-page.png">
+                        <img class="previouse-img" src="image/previouse-page.webp">
                     </div>
                 </div>
                 <div class="settings-content-colour">
@@ -771,7 +771,7 @@ function settingsClick()
         <div class="settings-heading">
             <div class="settings">Settings</div>
             <div class="x-div js-x-div">
-                <img class="x-img" src="image/x.png">
+                <img class="x-img" src="image/x.webp">
             </div>
         </div>
         <div>
@@ -801,10 +801,10 @@ function settingsClick()
             <div class="settings-heading">
                 <div class="settings-difficulty">Settings</div>
                 <div class="x-div js-x-div">
-                    <img class="x-img" src="image/x.png">
+                    <img class="x-img" src="image/x.webp">
                 </div>
                 <div class="previouse-div js-previouse-div">
-                    <img class="previouse-img" src="image/previouse-page.png">
+                    <img class="previouse-img" src="image/previouse-page.webp">
                 </div>
             </div>
             <div>
@@ -838,10 +838,10 @@ function settingsClick()
             <div class="settings-heading">
                 <div class="settings">Settings</div>
                 <div class="x-div js-x-div">
-                    <img class="x-img" src="image/x.png">
+                    <img class="x-img" src="image/x.webp">
                 </div>
                 <div class="previouse-div js-previouse-div">
-                    <img class="previouse-img" src="image/previouse-page.png">
+                    <img class="previouse-img" src="image/previouse-page.webp">
                 </div>
             </div>
             <div class="settings-content-colour">
@@ -951,7 +951,7 @@ function infoClick()
         <div class="info-heading">
             <div class="x-info-div js-close">
                 <div class="x-info-container">
-                    <img class="x-info" src="image/double-back-arrow.png">
+                    <img class="x-info" src="image/double-back-arrow.webp">
                 </div>
                 <div class="x-info-text">Back</div>
             </div>
@@ -1004,7 +1004,7 @@ function infoClick()
                 <a href="https://commons.wikimedia.org/wiki/File:NotoSans_-_Cancellation_X_-_1F5D9.svg" title="x-icon">X-move</a>
                 <br>
                 <br>
-                <a href="https://pngimg.com/image/87386" title="o-icon">O-move</a>
+                <a href="https://webpimg.com/image/87386" title="o-icon">O-move</a>
             </p>
         </div>
     </div>`;
