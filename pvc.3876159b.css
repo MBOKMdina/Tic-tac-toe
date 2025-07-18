@@ -1,0 +1,370 @@
+.interface {
+  grid-template-columns: 150px 150px 150px;
+  gap: 16px;
+  height: 482px;
+  display: grid;
+}
+
+.tile {
+  background-color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  display: flex;
+}
+
+.tile-alternate {
+  background-color: #d3d3d3;
+  width: 150px;
+  height: 150px;
+}
+
+.grow {
+  animation: .5s grow;
+}
+
+.move {
+  width: 150px;
+  height: 150px;
+}
+
+.back-ground {
+  background-color: gray;
+}
+
+.purple-back-ground {
+  background-color: purple;
+}
+
+.blue-back-ground {
+  background-color: #00f;
+}
+
+.green-back-ground {
+  background-color: green;
+}
+
+.black-back-ground {
+  background-color: #000;
+}
+
+.brown-back-ground {
+  background-color: brown;
+}
+
+.orange-back-ground {
+  background-color: orange;
+}
+
+.yellow-back-ground {
+  background-color: #ff0;
+}
+
+.white-back-ground {
+  background-color: #fff;
+}
+
+.containment-interface {
+  z-index: 2;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0 0 0 500px;
+}
+
+.title {
+  color: #fff;
+  z-index: 2;
+  font-family: fantasy;
+  font-size: 50px;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+}
+
+.title-black {
+  color: #000;
+  font-size: 50px;
+}
+
+.vs {
+  justify-content: space-around;
+  align-items: center;
+  font-size: 80px;
+  display: flex;
+}
+
+.status-message {
+  background-color: #a9a9a9;
+  border: 10px inset gray;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  font-family: fantasy;
+  font-size: 20px;
+  animation: 1s slide-down;
+  display: flex;
+  position: absolute;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.status-message-image {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.status-message-inside-content {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.deco {
+  background-color: #d3d3d3;
+  border-width: 1px;
+  border-color: #000;
+  border-bottom-style: solid;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.deco2 {
+  background-color: #d3d3d3;
+  border-width: 1px;
+  border-color: #000;
+  border-top-style: solid;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.disable {
+  width: 482px;
+  height: 482px;
+  position: absolute;
+}
+
+.temp-disable-div {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.background2 {
+  opacity: .7;
+  z-index: 4;
+  background-color: #000;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.game-start-envelope {
+  z-index: 5;
+  justify-content: space-around;
+  align-items: center;
+  animation: 5s slide-in;
+  display: flex;
+  position: fixed;
+  inset: 0;
+  transform: translateX(100%);
+}
+
+.game-start {
+  color: #fff;
+  font-family: fantasy;
+  font-size: 50px;
+  position: relative;
+}
+
+@keyframes laugh {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+
+  50% {
+    width: 60px;
+    height: 60px;
+  }
+
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes growResponsive {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes growResponsiveX2 {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  25% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@media (width <= 981px) and (height >= 1200px) {
+  .containment-interface {
+    top: 429.2px;
+    bottom: 286.4px;
+    left: 0;
+  }
+
+  .title {
+    color: #fff;
+    font-family: fantasy;
+    font-size: 50px;
+    position: absolute;
+    left: 30px;
+  }
+
+  .interface {
+    grid-template-columns: 150px 150px 150px;
+    gap: 16px;
+    height: 482px;
+    display: grid;
+  }
+}
+
+@media (height <= 1400px) and (width <= 981px) {
+  .containment-interface {
+    top: 354.8px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (width <= 981px) and (height <= 593.7px) {
+  .containment-interface {
+    left: 333px;
+  }
+
+  .interface {
+    grid-template-columns: 100px 100px 100px;
+    gap: 11px;
+    height: 322px;
+    display: grid;
+  }
+
+  .tile {
+    width: 100px;
+    height: 100px;
+  }
+
+  .grow {
+    animation: .5s growResponsive;
+  }
+
+  .move {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (width <= 981px) and (height <= 451px) {
+  .tile {
+    width: 80px;
+    height: 80px;
+  }
+
+  .interface {
+    grid-template-columns: 80px 80px 80px;
+    gap: 9px;
+    height: 258px;
+    display: grid;
+  }
+
+  .move {
+    width: 80px;
+    height: 80px;
+  }
+
+  .grow {
+    animation: .5s growResponsiveX2;
+  }
+}
+
+@media (width <= 981px) and (height <= 1200px) {
+  .containment-interface {
+    top: 0;
+    left: 333px;
+  }
+}
+/*# sourceMappingURL=pvc.3876159b.css.map */

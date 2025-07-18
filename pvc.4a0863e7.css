@@ -1,0 +1,783 @@
+.profile-picture-APK {
+  width: 0;
+  height: 0;
+}
+
+.options {
+  border-width: 1px;
+  border-top-style: solid;
+  border-top-color: currentColor;
+  flex-direction: column;
+  height: 250px;
+  padding: 10px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.text-click-game, .text-click-settings, .text-click-info, .text-click-mode {
+  opacity: 0;
+  background-color: #fff;
+  width: 480px;
+  height: 40px;
+  transition: all .5s;
+  position: absolute;
+}
+
+.text-click-settings {
+  margin-top: 50px;
+}
+
+.text-click-info {
+  margin-top: 100px;
+}
+
+.text-click-mode {
+  margin-top: 150px;
+}
+
+.options-div {
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: arial;
+  font-size: 15px;
+  display: flex;
+}
+
+.options-div-hover {
+  background-color: #a9a9a9;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.slogan {
+  color: gray;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.x-div {
+  background-color: #d3d3d3;
+  border-top-right-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 25px;
+  height: 24.5px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.x-info-div {
+  background-color: #a9a9a9;
+  border-style: none outset outset;
+  border-width: medium 2px 2px;
+  border-top-color: currentColor;
+  border-bottom-color: #d4d4d4;
+  border-left-color: #e2e2e2;
+  align-items: center;
+  height: 23.4px;
+  font-weight: 300;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.x-info-text {
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.x-info-container {
+  border-width: 3px;
+  border-color: #d5d5d5;
+  border-right-style: groove;
+  justify-content: space-around;
+  align-items: center;
+  width: 27px;
+  height: 100%;
+  display: flex;
+}
+
+.x-div:hover, .previouse-div:hover {
+  background-color: #a9a9a9;
+  transition: all .5s;
+}
+
+.x-info-div:hover {
+  cursor: pointer;
+  background-color: #727272;
+  transition: all .5s;
+}
+
+.settings-heading, .info-heading {
+  color: #000;
+  background-color: #d3d3d3;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: currentColor;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  height: 25px;
+  font-family: arial;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.info-heading {
+  border-bottom: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  position: relative;
+}
+
+.settings-content-colour {
+  padding: 20px;
+}
+
+.colour-div, .difficulty-div {
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  font-family: arial;
+  font-weight: bold;
+}
+
+.colour-div:hover, .difficulty-div:hover {
+  background-color: #767575;
+  transition: all .5s;
+}
+
+.x-img {
+  width: 10px;
+  height: 10px;
+}
+
+.previouse-img {
+  width: 12px;
+  height: 12px;
+}
+
+.x-info {
+  width: 17px;
+  height: 17px;
+}
+
+.previouse-div {
+  border-top-left-radius: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 25px;
+  height: 24.5px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.default, .purple, .blue, .green, .black, .brown, .orange, .yellow, .white {
+  width: 76px;
+  height: 50px;
+}
+
+.default {
+  background-color: gray;
+}
+
+.default:hover, .purple:hover, .blue:hover, .green:hover, .black:hover, .brown:hover, .orange:hover {
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+
+.white:hover, .yellow:hover {
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.blue {
+  background-color: #00f;
+}
+
+.green {
+  background-color: green;
+}
+
+.black {
+  background-color: #000;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: #ff0;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.deco-background {
+  background-color: #d3d3d3;
+  border-width: 1px;
+  border-color: #000;
+  border-bottom-style: solid;
+  height: 21.5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.close {
+  background-color: red;
+  border: 1px #000;
+  border-left-style: solid;
+  justify-content: space-around;
+  align-items: center;
+  width: 21px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.close-btn-image {
+  width: 18px;
+  height: 18px;
+}
+
+.references {
+  height: calc(100vh - 25.8px);
+  font-size: 20px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.paragraph {
+  margin-left: 15px;
+}
+
+.paragraph-title {
+  margin-top: 30px;
+  margin-left: 15px;
+  text-decoration: underline;
+}
+
+.settings-ui, .settings-ui-difficulty {
+  z-index: 3;
+  background-color: #a9a9a9;
+  border: 1px solid;
+  border-radius: 10px;
+  flex-direction: column;
+  width: 300px;
+  margin-top: -150.8px;
+  margin-left: -150.8px;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.settings-ui-difficulty {
+  width: 150px;
+  margin-left: -75.4px;
+}
+
+.settings-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.colour-palette {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  display: grid;
+}
+
+.close:hover {
+  background-color: #c90707;
+}
+
+.info-ui {
+  color: #fff;
+  z-index: 3;
+  background-color: #a9a9a9;
+  border-width: 1px;
+  border-color: #000;
+  border-left-style: solid;
+  font-weight: bold;
+  position: absolute;
+  inset: 0;
+}
+
+.you, .comp {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.vs-image {
+  width: 120px;
+  height: 120px;
+}
+
+.player-title {
+  font-weight: bold;
+}
+
+.score-digit {
+  font-size: 60px;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+}
+
+.score-title {
+  text-decoration: underline;
+}
+
+.score-div {
+  grid-template-columns: 120px 120px 120px;
+  column-gap: 16px;
+  font-size: 20px;
+  display: grid;
+}
+
+.side-bar {
+  z-index: 1;
+  background-color: #d3d3d3;
+  border-width: 1px;
+  border-color: #000;
+  border-right-style: solid;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  font-family: arial;
+  font-size: 40px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.scoreBar-APK, .options-APK {
+  opacity: 0;
+  z-index: -5;
+  position: absolute;
+}
+
+.icon-APK, .vs-image-APK {
+  height: 0;
+}
+
+@media (width <= 981px) and (height >= 1200px) {
+  .x-info-container {
+    border-width: 9px;
+    width: 81px;
+  }
+
+  .info-heading {
+    border-width: 3px;
+    height: 75px;
+  }
+
+  .x-info {
+    width: 51px;
+    height: 51px;
+  }
+
+  .x-info-div {
+    border-width: 6px;
+    height: 70.2px;
+  }
+
+  .x-info-text {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 48px;
+  }
+
+  .references {
+    height: calc(100vh - 793px);
+  }
+
+  .settings-difficulty {
+    font-size: 48px;
+  }
+
+  .settings-content-colour {
+    padding: 60px;
+  }
+
+  .default, .purple, .blue, .green, .black, .brown, .orange, .yellow, .white {
+    width: 100%;
+    height: 150px;
+  }
+
+  .colour-palette {
+    gap: 32px;
+  }
+
+  .previouse-div {
+    border-top-left-radius: 20px;
+    width: 50px;
+    height: 73.5px;
+  }
+
+  .colour-div, .difficulty-div {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-size: 48px;
+  }
+
+  .x-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .previouse-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .x-div {
+    border-top-right-radius: 30px;
+    width: 74px;
+    height: 73.5px;
+  }
+
+  .settings {
+    font-size: 48px;
+  }
+
+  .settings-heading {
+    border-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: currentColor;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 75px;
+  }
+
+  .settings-ui, .settings-ui-difficulty {
+    border-width: 3px;
+    border-radius: 30px;
+    width: 900px;
+    margin-top: -452.4px;
+    margin-left: -452.4px;
+  }
+
+  .settings-ui-difficulty {
+    width: 450px;
+    margin-left: -226.2px;
+  }
+
+  .side-bar {
+    opacity: 0;
+    z-index: -10;
+  }
+
+  .scoreBar-APK {
+    z-index: 1;
+    opacity: 1;
+    background-color: #d3d3d3;
+    border: solid;
+    border-left: 20px groove;
+    border-right: 20px groove;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 424.4px;
+    font-family: arial;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .you-APK, .comp-APK {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+
+  .score-title-APK {
+    justify-content: space-around;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 60px;
+    text-decoration: underline;
+    display: flex;
+  }
+
+  .player-title-APK {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .score-digit-APK {
+    font-size: 60px;
+  }
+
+  .profile-picture-APK, .vs-image-APK {
+    width: 120px;
+    height: 120px;
+  }
+
+  .score-div-APK {
+    grid-template-columns: 200px 200px 200px;
+    column-gap: 16px;
+    font-size: 20px;
+    display: grid;
+  }
+
+  .vs-APK {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+
+  .options-APK {
+    opacity: 1;
+    z-index: 2;
+    background-color: #d3d3d3;
+    height: 286.4px;
+    font-family: arial;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .options-container-APK {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+    display: grid;
+  }
+
+  .options-div-APK {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    display: flex;
+  }
+
+  .options-hoverDiv-APK {
+    background-color: #a9a9a9;
+  }
+
+  .icon-APK {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .slogan-APK {
+    color: gray;
+    margin-left: -385.565px;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+  }
+}
+
+@media (height <= 1400px) and (width <= 981px) {
+  .references {
+    height: calc(100vh - 718.6px);
+  }
+
+  .scoreBar-APK {
+    height: 350px;
+  }
+
+  .player-title-APK {
+    font-size: 30px;
+  }
+
+  .score-title-APK, .score-digit-APK {
+    font-size: 50px;
+  }
+
+  .profile-picture-APK {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (width <= 981px) and (height <= 593.7px) {
+  .settings-ui, .settings-ui-difficulty {
+    z-index: 3;
+    background-color: #a9a9a9;
+    border: 1px solid;
+    border-radius: 10px;
+    flex-direction: column;
+    width: 300px;
+    margin-top: -150.8px;
+    margin-left: -50.8px;
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+
+  .settings-ui-difficulty {
+    width: 150px;
+    margin-left: -24.6px;
+  }
+
+  .side-bar {
+    width: 333px;
+  }
+
+  .vs-image, .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .score-div {
+    grid-template-columns: 80px 80px 80px;
+    column-gap: 11px;
+    font-size: 15px;
+    display: grid;
+  }
+
+  .score-digit {
+    font-size: 40px;
+  }
+
+  .slogan {
+    font-size: 15px;
+  }
+
+  .profile-picture-APK {
+    height: 0;
+  }
+}
+
+@media (width <= 981px) and (height <= 1200px) {
+  .references {
+    height: calc(100vh - 25.8px);
+  }
+
+  .side-bar {
+    width: 333px;
+  }
+
+  .vs-image, .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .score-div {
+    grid-template-columns: 80px 80px 80px;
+    column-gap: 11px;
+    font-size: 15px;
+    display: grid;
+  }
+
+  .score-digit {
+    font-size: 40px;
+  }
+
+  .slogan {
+    font-size: 15px;
+  }
+
+  .profile-picture-APK {
+    height: 0;
+  }
+}
+
+@media (width <= 981px) and (height <= 593.6px) {
+  .score-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-decoration: underline;
+  }
+
+  .text-click-game, .text-click-settings, .text-click-info, .text-click-mode {
+    opacity: 0;
+    background-color: #fff;
+    width: 480px;
+    height: 0;
+    transition: all .5s;
+    position: absolute;
+  }
+
+  .options-hoverDiv-APK {
+    background-color: #a9a9a9;
+  }
+
+  .options {
+    height: 200px;
+  }
+
+  .options-div {
+    margin-bottom: 0;
+  }
+}
+
+@media (width <= 981px) and (height <= 451px) {
+  .options {
+    grid-template-rows: 35px;
+    grid-template-columns: 1fr 1fr;
+    height: 120px;
+    display: grid;
+  }
+
+  .options-div {
+    height: 25px;
+    padding: 5px;
+  }
+}
+/*# sourceMappingURL=pvc.4a0863e7.css.map */
